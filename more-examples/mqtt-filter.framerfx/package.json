@@ -1,0 +1,21 @@
+{
+	"main": "dist/index.js",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^16.8"
+	},
+	"peerDependencies": {
+		"framer": "^1.0",
+		"react": "^16.8"
+	},
+	"framer": {
+		"id": "cfc8c16c-534d-49fa-b28c-caa2af1b935f"
+	},
+	"author": "Michael Ognew",
+	"dependencies": {
+		"@framer/benjamin.slider": "^1.9.0",
+		"@framer/framer.examples": "^1.7.0",
+		"@framer/unsplash.unsplash": "^1.0.0",
+		"mqtt": "^3.0.0"
+	}
+}
