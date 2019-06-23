@@ -5,8 +5,10 @@ import { connect as mqttConnect } from "mqtt"
 
 //connect to our broker
 //IMPORTANT: you have to add "ws://" and the websockets port
-let mqttClient = mqttConnect("ws://192.168.1.201:9001")
+// use "ws://test.mosquitto.org:8080" for public broker
+let mqttClient = mqttConnect("ws://your.ip.here:9001")
 let data
+
 //export MQTT
 export function useMQTTMessages() {
     //creating our state here
@@ -38,14 +40,14 @@ export function useMQTTMessages() {
                 setGrayscale(data.toString() + "%")
             }
             if (topic == "page") {
-                console.log(data)
+                //mapping values form arduino
                 setPage(Math.round(transform(data, [0, 4096], [0, 5])))
             }
         })
 
         return function cleanup() {}
     })
-    //returning
+    //returning all states
     return [
         isHue,
         isBrightness,

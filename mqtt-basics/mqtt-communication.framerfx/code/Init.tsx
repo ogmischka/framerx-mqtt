@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Frame, useCycle, Page } from "framer"
+import { Frame } from "framer"
 import { useMQTTMessages } from "./MqttConnector"
 
 export function Init() {

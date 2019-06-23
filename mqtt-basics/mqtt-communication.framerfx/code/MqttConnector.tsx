@@ -4,7 +4,8 @@ import { connect as mqttConnect } from "mqtt"
 
 //connect to our broker
 //IMPORTANT: you have to add "ws://" and the websockets port
-let mqttClient = mqttConnect("ws://192.168.1.201:9001")
+// use "ws://test.mosquitto.org:8080" for public broker
+let mqttClient = mqttConnect("ws://your.ip.here:9001")
 
 //export MQTT
 export function useMQTTMessages() {
@@ -20,7 +21,6 @@ export function useMQTTMessages() {
 
         mqttClient.on("message", function(topic, message) {
             // set the state to received message
-            console.log(message.toString())
             setMessage(message.toString())
         })
     })

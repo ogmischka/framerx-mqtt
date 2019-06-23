@@ -4,7 +4,7 @@ import { connect as mqttConnect } from "mqtt"
 
 //connect to our broker
 //IMPORTANT: you have to add "ws://" and the websockets port
-let mqttClient = mqttConnect("ws://192.168.1.201:9001")
+let mqttClient = mqttConnect("ws://your.ip.here:9001")
 
 //export MQTT
 export function useMQTTMessages() {
